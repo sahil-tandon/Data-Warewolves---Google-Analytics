@@ -1,4 +1,4 @@
-/***************************** styles.css ******************************//***************************** styles.css ******************************/
+/***************************** styles.css ******************************/
 
 /*Start : Reset CSS*/
 
@@ -52,3 +52,70 @@ table {
 	border-spacing: 0;
 }
 /*End : Reset CSS */
+
+/*Start : Global CSS */
+.body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+.clearfix:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+/*End : Global CSS*/
+
+/*Start : Header CSS*/
+.header-logo {
+    float: left;
+    width: 350px;
+    padding: 8px 0;
+}
+.header-logo img {
+    max-width: 100%;
+}
+.header-links {
+    float: right;
+    padding: 30px 0px;
+}
+div#header {
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+}
+.header-links a {
+    padding: 10px 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #FC4C69;
+    letter-spacing: 0.025em;
+}
+/*End : Header CSS*/
