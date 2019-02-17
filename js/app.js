@@ -15,7 +15,8 @@ $(document).ready(function(){
 	$('.header-links a').on('click', function(e){
 		e.preventDefault();		//prevent redirection to requested page
 		var thisCategory,
-			thisLabel = $(this).text() + "-" + $(this).attr("href");
+			thisHref = $(this).attr("href"),
+			thisLabel = $(this).text() + "-" + thisHref;
 
 		if(window.location.href.indexOf("index.html") > -1){
 			thisCategory = "Home";
@@ -35,7 +36,7 @@ $(document).ready(function(){
 		ga('send', 'event', thisCategory, "Navigation Click", thisLabel);
 
 		setTimeout(function(){
-			window.location.href = thisValue;	//redirect to requested page
+			window.location.href = thisHref;	//redirect to requested page
 		}, 5000);
 	});
 	/*End: Google Analytics Event Tracking Code*/
