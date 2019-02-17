@@ -11,7 +11,18 @@ $(document).ready(function(){
 	});
 	/*End: Initialize Billboard Carousel*/
 
-	/*Start: Returns Current Page Name*/
+	/*Start: Handle Header Expand/Collapse*/
+	$(window).scroll(function(){
+        if($(this).scrollTop()>80){
+            $('#header').addClass("collapsed");
+        }
+        else{
+            $('#header').removeClass("collapsed");
+        }
+    });
+    /*End: Handle Header Expand/Collapse*/
+
+	/*Start: Return Current Page Name*/
 	function getCurrentPage() {
 		var currentPage;
 		if(window.location.href.indexOf("index.html") > -1){
@@ -28,7 +39,7 @@ $(document).ready(function(){
 		}
 		return currentPage;
 	}
-	/*End: Returns Current Page Name*/
+	/*End: Return Current Page Name*/
 
 	/*Start: Google Analytics Event Tracking Code*/
 	$('.header-logo a').on('click', function(e){
