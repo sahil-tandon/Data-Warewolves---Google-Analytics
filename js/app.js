@@ -1,6 +1,7 @@
 /***************************** app.js ******************************/
 
-$(document).ready(function(){
+$(document).ready(function(){	
+	/*Start: Initialize Billboard Carousel*/
 	$('.billboard-carousel').slick({
 		dots: true,
 		infinite: true,
@@ -8,4 +9,30 @@ $(document).ready(function(){
 		adaptiveHeight: true,
 		autoplay: true
 	});
+	/*End: Initialize Billboard Carousel*/
+
+	/*Start: Google Analytics Event Tracking Code*/
+	$('.header-links a').on('click',funtion(e){
+		var thisCategory,
+			thisLabel = $(this).text(),
+			thisValue = $(this).href();
+
+		if(window.location.href.indexOf("index.html") > -1){
+			thisCategory = "Home";
+		}
+		else if(window.location.href.indexOf("learn.html") > -1){
+			thisCategory = "Learn Google Analytics";
+		}
+		else if(window.location.href.indexOf("getcertified.html") > -1){
+			thisCategory = "Get Certified";
+		}
+		else{
+			thisCategory = "Contact Us";
+		}
+		/*****
+			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])
+		*****/
+		ga('send', 'event', thisCategory, "Navigation Click", thisLabel, thisValue);
+	});
+	/*End: Google Analytics Event Tracking Code*/
 });
