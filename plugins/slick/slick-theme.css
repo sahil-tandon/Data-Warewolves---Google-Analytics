@@ -11,7 +11,6 @@
     font-family: 'slick';
     font-weight: normal;
     font-style: normal;
-
     src: url('./fonts/slick.eot');
     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
 }
@@ -21,26 +20,22 @@
 {
     font-size: 0;
     line-height: 0;
-
     position: absolute;
     top: 50%;
-
     display: block;
-
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 50px;
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
-
     cursor: pointer;
-
     color: transparent;
     border: none;
     outline: none;
     background: transparent;
 }
+/*
 .slick-prev:hover,
 .slick-prev:focus,
 .slick-next:hover,
@@ -62,7 +57,6 @@
 {
     opacity: .25;
 }
-
 .slick-prev:before,
 .slick-next:before
 {
@@ -76,11 +70,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+*/
 .slick-prev
 {
-    left: -25px;
+    left: -50px;
 }
+/*
 [dir='rtl'] .slick-prev
 {
     right: -25px;
@@ -94,12 +89,12 @@
 {
     content: '→';
 }
-
+*/
 .slick-next
 {
-    right: -25px;
+    right: -50px;
 }
-[dir='rtl'] .slick-next
+/*[dir='rtl'] .slick-next
 {
     right: auto;
     left: -25px;
@@ -111,18 +106,29 @@
 [dir='rtl'] .slick-next:before
 {
     content: '←';
+}*/
+.slick-prev:before,
+.slick-next:before {
+    content: '<';
+    color: #000000;
+    font-family: monospace;
+    font-size: 60px;
+    line-height: 1;
+}
+.slick-next:before {
+    content: '>';
 }
 
 /* Dots */
 .slick-dotted.slick-slider
 {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .slick-dots
 {
     position: absolute;
-    bottom: -25px;
+    bottom: -40px;
 
     display: block;
 
@@ -140,8 +146,8 @@
 
     display: inline-block;
 
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     margin: 0 5px;
     padding: 0;
 
@@ -154,8 +160,8 @@
 
     display: block;
 
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     padding: 5px;
 
     cursor: pointer;
@@ -178,15 +184,15 @@
 .slick-dots li button:before
 {
     font-family: 'slick';
-    font-size: 6px;
-    line-height: 20px;
+    font-size: 15px;
+    line-height: 32px;
 
     position: absolute;
     top: 0;
     left: 0;
 
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 
     content: '•';
     text-align: center;
