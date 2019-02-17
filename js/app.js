@@ -11,33 +11,49 @@ $(document).ready(function(){
 	});
 	/*End: Initialize Billboard Carousel*/
 
-	/*Start: Google Analytics Event Tracking Code*/
-	$('.header-links a').on('click', function(e){
-		e.preventDefault();		//prevent redirection to requested page
-		var thisCategory,
-			thisHref = $(this).attr("href"),
-			thisLabel = $(this).text() + "-" + thisHref;
-
+	/*Start: Returns Current Page Name*/
+	function getCurrentPage() {
+		var currentPage;
 		if(window.location.href.indexOf("index.html") > -1){
-			thisCategory = "Home";
+			currentPage = "Home";
 		}
 		else if(window.location.href.indexOf("learn.html") > -1){
-			thisCategory = "Learn Google Analytics";
+			currentPage = "Learn Google Analytics";
 		}
 		else if(window.location.href.indexOf("getcertified.html") > -1){
-			thisCategory = "Get Certified";
+			currentPage = "Get Certified";
 		}
 		else{
-			thisCategory = "Contact Us";
+			currentPage = "Contact Us";
 		}
+		return currentPage;
+	}
+	/*End: Returns Current Page Name*/
+
+	/*Start: Google Analytics Event Tracking Code*/
+	$('.header-logo a').on('click', function(e){
+		var thisCategory = getCurrentPage(),
+			thisHref = $(this).attr("href"),
+			thisLabel = "Header Logo" + " (" + thisHref + ")";
+
 		/*****
 			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])			
 		*****/
 		ga('send', 'event', thisCategory, "Navigation Click", thisLabel);
+	});
 
-		setTimeout(function(){
-			window.location.href = thisHref;	//redirect to requested page
-		}, 5000);
+	$('.header-links a').on('click', function(e){
+		e.preventDefault();		//prevent redirection to requested page
+		var thisCategory = getCurrentPage(),
+			thisHref = $(this).attr("href"),
+			thisLabel = $(this).text() + " (" + thisHref + ")";
+		
+		/*****
+			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])
+		*****/
+		ga('send', 'event', thisCategory, "Navigation Click", thisLabel);
+
+		window.location.href = thisHref;	//redirect to requested page
 	});
 	/*End: Google Analytics Event Tracking Code*/
 });
