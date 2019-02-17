@@ -35,7 +35,9 @@ $(document).ready(function(){
 		*****/
 		ga('send', 'event', thisCategory, "Navigation Click", thisLabel, thisValue);
 
-		window.location.href = thisValue;	//redirect to requested page
+		setTimeout(function(){
+			window.location.href = thisValue;	//redirect to requested page
+		}, 500);
 	});
 	/*End: Google Analytics Event Tracking Code*/
 });
