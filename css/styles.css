@@ -126,6 +126,14 @@ img {
 }
 /*End : Header CSS*/
 
+/*Start : Home - Top Intro Section */
+.intro-section {
+	margin-top: 10px;
+	font-size: 18px;
+    line-height: 1.4;
+}
+/*End : Home - Top Intro Section*/
+
 /*Start : Billboard Carousel Styles*/
 .billboard-carousel {
 	margin-top: 10px;
