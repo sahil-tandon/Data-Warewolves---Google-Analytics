@@ -1,13 +1,13 @@
 /***************************** app.js ******************************/
 
-$(document).ready(function(){	
+$(document).ready(function(){
 	/*Start: Initialize Billboard Carousel*/
 	$('.billboard-carousel').slick({
 		dots: true,
-		infinite: true,
+		infinite: false,
 		arrows: true,
 		adaptiveHeight: true,
-		autoplay: true
+		autoplay: false
 	});
 	/*End: Initialize Billboard Carousel*/
 

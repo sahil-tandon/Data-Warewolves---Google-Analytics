@@ -160,4 +160,43 @@ img {
 .billboard-carousel {
 	margin-top: 10px;
 }
+.billboard-item {
+  height: 400px!important;
+  position: relative;
+}
+.billboard-item:nth-child(4n) {
+  background: #0F9D58;
+}
+.billboard-item:nth-child(4n+1) {
+  background: #DB4437;
+}
+.billboard-item:nth-child(4n+2) {
+  background: #F4B400;
+}
+.billboard-item:nth-child(4n+3) {
+  background: #4285F4;
+}
+.item-content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  padding: 10px 10%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+  box-sizing: border-box;  
+}
+.item-head {
+    font-weight: bold;
+    padding: 0 15%;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+}
+.item-copy {
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 10px;
+    letter-spacing: 0.05em;
+}
 /*End : Billboard Carousel Styles*/
