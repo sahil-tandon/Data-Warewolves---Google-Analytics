@@ -101,29 +101,32 @@ img {
 /*Start : Header CSS*/
 #header {
 	position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    background: #fff;
-    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.7);
-    z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: #fff;
+  box-shadow: 0 3px 5px rgba(57, 63, 72, 0.7);
+  z-index: 999;
 }
 .header-logo {
-    float: left;
-    width: 350px;
-    padding: 6px 0;
+   float: left;
+   width: 350px;
+   padding: 6px 0;
+}
+.header-logo a {
+   font-size: 0;
 }
 .header-links {
-    float: right;
-    padding: 30px 0px;
+   float: right;
+   padding: 30px 0px;
 }
 .header-links a {
-    padding: 10px 20px;
-    font-size: 20px;
-    text-decoration: none;
-    color: #FC4C69;
-    letter-spacing: 0.025em;
+   padding: 10px 20px;
+   font-size: 20px;
+   text-decoration: none;
+   color: #FC4C69;
+   letter-spacing: 0.025em;
 }
 /*End : Header CSS*/
 
