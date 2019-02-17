@@ -12,10 +12,11 @@ $(document).ready(function(){
 	/*End: Initialize Billboard Carousel*/
 
 	/*Start: Google Analytics Event Tracking Code*/
-	$('.header-links a').on('click',function(e){
+	$('.header-links a').on('click', function(e){
+		e.preventDefault();		//prevent redirection to requested page
 		var thisCategory,
 			thisLabel = $(this).text(),
-			thisValue = $(this).href();
+			thisValue = $(this).attr("href");
 
 		if(window.location.href.indexOf("index.html") > -1){
 			thisCategory = "Home";
@@ -33,6 +34,8 @@ $(document).ready(function(){
 			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])
 		*****/
 		ga('send', 'event', thisCategory, "Navigation Click", thisLabel, thisValue);
+
+		window.location.href = thisValue;	//redirect to requested page
 	});
 	/*End: Google Analytics Event Tracking Code*/
 });
