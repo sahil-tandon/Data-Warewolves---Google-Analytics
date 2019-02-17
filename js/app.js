@@ -12,7 +12,7 @@ $(document).ready(function(){
 	/*End: Initialize Billboard Carousel*/
 
 	/*Start: Google Analytics Event Tracking Code*/
-	$('.header-links a').on('click',funtion(e){
+	$('.header-links a').on('click',function(e){
 		var thisCategory,
 			thisLabel = $(this).text(),
 			thisValue = $(this).href();
