@@ -15,8 +15,7 @@ $(document).ready(function(){
 	$('.header-links a').on('click', function(e){
 		e.preventDefault();		//prevent redirection to requested page
 		var thisCategory,
-			thisLabel = $(this).text(),
-			thisValue = $(this).attr("href");
+			thisLabel = $(this).text() + "-" + $(this).attr("href");
 
 		if(window.location.href.indexOf("index.html") > -1){
 			thisCategory = "Home";
@@ -31,11 +30,9 @@ $(document).ready(function(){
 			thisCategory = "Contact Us";
 		}
 		/*****
-			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])
+			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])			
 		*****/
-		ga('send', 'event', thisCategory, "Navigation Click", thisLabel, thisValue);
-
-		ga('send', 'event', "Test Category", "Test Action", "Test Label", "Test Value");
+		ga('send', 'event', thisCategory, "Navigation Click", thisLabel);
 
 		setTimeout(function(){
 			window.location.href = thisValue;	//redirect to requested page
