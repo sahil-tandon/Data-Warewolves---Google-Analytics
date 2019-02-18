@@ -42,19 +42,19 @@ $(document).ready(function(){
 	/*End: Return Current Page Name*/
 
 	/*Start: Google Analytics Event Tracking Code*/
-	$('.header-logo a').on('click', function(e){
+	$('.header-logo a').on('click', function(){
 		var thisCategory = getCurrentPage(),
 			thisHref = $(this).attr("href"),
+			thisAction = "Header Logo Click",
 			thisLabel = "Home" + " (" + thisHref + ")";
 
 		/*****
 			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])			
 		*****/
-		ga('send', 'event', thisCategory, "Header Logo Click", thisLabel);
+		ga('send', 'event', thisCategory, thisAction, thisLabel);
 	});
 
-	$('.header-links a').on('click', function(e){
-		e.preventDefault();		//prevent redirection to requested page
+	$('.header-links a').on('click', function(){		
 		var thisCategory = getCurrentPage(),
 			thisHref = $(this).attr("href"),
 			thisAction = "Navigation Click",
@@ -63,9 +63,7 @@ $(document).ready(function(){
 		/*****
 			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])
 		*****/
-		ga('send', 'event', thisCategory, thisAction, thisLabel);
-
-		window.location.href = thisHref;	//redirect to requested page
+		ga('send', 'event', thisCategory, thisAction, thisLabel);		
 	});
 
 	$('.slick-arrow').on('click', function(){
