@@ -295,13 +295,13 @@ img {
 .item-head {
     font-weight: bold;
     padding: 0 15%;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 28px;
+    line-height: 34px;
     letter-spacing: 0.01em;
 }
 .item-copy {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 26px;
     padding-top: 10px;
     letter-spacing: 0.05em;
 }
