@@ -254,25 +254,28 @@ img {
 }
 /*End : Home Page */
 
-/*Start : Billboard Carousel Styles*/
-.billboard-carousel {
+/*Start : Fact Carousel Styles*/
+.fact-carousel {
 	margin-top: 10px;
 }
-.billboard-item {
+.fact-item {
   height: 400px!important;
   position: relative;
 }
-.billboard-item:nth-child(4n) {
+.fact-item:nth-child(4n) {
   background: #0F9D58;
 }
-.billboard-item:nth-child(4n+1) {
+.fact-item:nth-child(4n+1) {
   background: #DB4437;
 }
-.billboard-item:nth-child(4n+2) {
+.fact-item:nth-child(4n+2) {
   background: #F4B400;
 }
-.billboard-item:nth-child(4n+3) {
+.fact-item:nth-child(4n+3) {
   background: #4285F4;
+}
+.fact-carousel .slick-list {
+  border: 5px solid #000;
 }
 .item-content {
   position: absolute;

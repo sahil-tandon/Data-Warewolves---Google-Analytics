@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
 	/*Start: Initialize Billboard Carousel*/
-	$('.billboard-carousel').slick({
+	$('.fact-carousel').slick({
 		dots: true,
 		infinite: false,
 		arrows: true,
