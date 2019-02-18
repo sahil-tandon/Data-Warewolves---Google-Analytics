@@ -94,7 +94,7 @@ img {
 }
 .content {
 	margin-top: 80px;
-	padding-top: 20px;
+	padding: 20px 0 50px 0;
 }
 /*End : Global CSS*/
 
@@ -148,13 +148,45 @@ img {
 }
 /*End : Header CSS*/
 
-/*Start : Home - Top Intro Section */
+/*Start : Home Page */
 .intro-section {
 	margin-top: 10px;
 	font-size: 18px;
   line-height: 1.4;
 }
-/*End : Home - Top Intro Section*/
+.welcome-message,
+.meet-us,
+.cant-wait,
+.have-questions {
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  line-height: 24px;
+  font-weight: bold;
+  padding: 40px 5% 0 5%;
+  box-sizing: border-box;
+  color: #333;
+}
+.welcome-message p {
+  padding-bottom: 10px;
+}
+.facts-anchor {
+    text-align: center;
+    padding: 30px 0 60px 0;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    font-size: 16px;
+    position: relative;
+}
+.facts-anchor:after {
+    content: '\21E9';
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 30px);
+    font-family: monospace;
+    font-size: 40px;
+}
+/*End : Home Page */
 
 /*Start : Billboard Carousel Styles*/
 .billboard-carousel {

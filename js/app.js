@@ -45,26 +45,35 @@ $(document).ready(function(){
 	$('.header-logo a').on('click', function(e){
 		var thisCategory = getCurrentPage(),
 			thisHref = $(this).attr("href"),
-			thisLabel = "Header Logo" + " (" + thisHref + ")";
+			thisLabel = "Home" + " (" + thisHref + ")";
 
 		/*****
 			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])			
 		*****/
-		ga('send', 'event', thisCategory, "Navigation Click", thisLabel);
+		ga('send', 'event', thisCategory, "Header Logo Click", thisLabel);
 	});
 
 	$('.header-links a').on('click', function(e){
 		e.preventDefault();		//prevent redirection to requested page
 		var thisCategory = getCurrentPage(),
 			thisHref = $(this).attr("href"),
+			thisAction = "Navigation Click",
 			thisLabel = $(this).text() + " (" + thisHref + ")";
 		
 		/*****
 			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])
 		*****/
-		ga('send', 'event', thisCategory, "Navigation Click", thisLabel);
+		ga('send', 'event', thisCategory, thisAction, thisLabel);
 
 		window.location.href = thisHref;	//redirect to requested page
+	});
+
+	$('.slick-arrow').on('click', function(){
+		var thisCategory = getCurrentPage(),
+			thisAction = "Slider Arrow Click",
+			thisLabel = $(this).hasClass("slick-prev") ? "Previous" : "Next";
+
+		ga('send', 'event', thisCategory, thisAction, thisLabel);
 	});
 	/*End: Google Analytics Event Tracking Code*/
 });
