@@ -97,7 +97,6 @@ img {
 }
 .content {
 	margin-top: 80px;
-	padding: 0 0 50px 0;
   transition: all 0.5s ease-in-out;
 }
 #header.collapsed ~ .content {
