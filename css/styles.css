@@ -102,6 +102,20 @@ img {
 #header.collapsed ~ .content {
   margin-top: 50px;
 }
+.fixed-backdrop {
+  position: fixed;
+  height: calc(100vh - 80px);
+  top: 80px;
+  width: 100%;
+  z-index: -999;
+  background: url('../images/backdrop.png');  
+  background-size: cover;
+  transition: all 0.5s ease-in-out;    
+}
+#header.collapsed ~ .fixed-backdrop {
+  top: 50px;
+  height: calc(100vh - 50px);
+}
 /*End : Global CSS*/
 
 /*Start : Header CSS*/
@@ -155,20 +169,6 @@ img {
 /*End : Header CSS*/
 
 /*Start : Home Page*/
-.fixed-billboard {
-  position: fixed;
-  height: calc(100vh - 80px);
-  top: 80px;
-  width: 100%;
-  z-index: -999;
-  background: url('../images/billboard.png');  
-  background-size: cover;
-  transition: all 0.5s ease-in-out;    
-}
-#header.collapsed ~ .fixed-billboard {
-  top: 50px;
-  height: calc(100vh - 50px);
-}
 .section { 
   position: relative; 
   font-family: Open Sans;
