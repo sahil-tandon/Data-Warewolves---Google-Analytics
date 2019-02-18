@@ -1,7 +1,9 @@
 /***************************** styles.css ******************************/
+/*Start : Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
+/*End: Fonts*/
 
 /*Start : Reset CSS*/
-
 /*
    http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -56,6 +58,7 @@ table {
 /*Start : Global CSS */
 body {
 	font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 img {
 	max-width: 100%;
@@ -94,7 +97,11 @@ img {
 }
 .content {
 	margin-top: 80px;
-	padding: 20px 0 50px 0;
+	padding: 0 0 50px 0;
+  transition: all 0.5s ease-in-out;
+}
+#header.collapsed ~ .content {
+  margin-top: 50px;
 }
 /*End : Global CSS*/
 
@@ -148,13 +155,72 @@ img {
 }
 /*End : Header CSS*/
 
-/*Start : Home Page */
+/*Start : Home Page*/
+.fixed-billboard {
+  position: fixed;
+  height: calc(100vh - 80px);
+  top: 80px;
+  width: 100%;
+  z-index: -999;
+  background: url('../images/billboard.png');  
+  background-size: cover;
+  transition: all 0.5s ease-in-out;    
+}
+#header.collapsed ~ .fixed-billboard {
+  top: 50px;
+  height: calc(100vh - 50px);
+}
+.section { 
+  position: relative; 
+  font-family: Open Sans;
+  color: black;
+  text-align: center;
+  box-sizing: border-box;
+  height: 100vh;
+  transition: all 0.5s ease-in-out;
+}
+.section:first-of-type {
+  height: calc(100vh - 80px)
+}
+#header.collapsed ~ .content .section:first-of-type {
+  height: calc(100vh - 50px) 
+}
+.section-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  padding: 0 5%;
+  box-sizing: border-box;
+}
+.section-head {
+  font-weight: 800;
+  letter-spacing: -10px;
+  font-size: 130px;
+  line-height: 130px;
+  padding-bottom: 30px;
+}
+.section-subhead {
+  font-weight: 800;
+  letter-spacing: -5px;
+  font-size: 80px;
+  line-height: 80px;
+  padding-bottom: 30px;
+}
+.section-copy {
+  font-size: 50px;
+  line-height: 50px;
+  letter-spacing: -3px;
+  font-weight: 400;
+  padding: 15px 0;
+}
 .intro-section {
 	margin-top: 10px;
 	font-size: 18px;
   line-height: 1.4;
 }
-.welcome-message,
+.welcome-section,
 .meet-us,
 .cant-wait,
 .have-questions {
@@ -231,4 +297,4 @@ img {
     padding-top: 10px;
     letter-spacing: 0.05em;
 }
-/*End : Billboard Carousel Styles*/
+/*End : Fact Carousel Styles*/
