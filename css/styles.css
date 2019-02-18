@@ -125,7 +125,7 @@ img {
   left: 0;
   right: 0;
   height: 80px;
-  background: #fff;
+  background: #000;
   box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
   z-index: 999;
   transition: height 0.5s ease-in-out;
@@ -136,12 +136,12 @@ img {
 .header-logo {
    float: left;
    width: 350px;
-   padding: 6px 0;
+   padding: 5.5px 0;
    transition: all 0.5s ease-in-out;
 }
 #header.collapsed .header-logo {
-    width: 210px;
-    padding: 4px 0px;
+    width: 225px;
+    padding: 2.4px 0px;
 }
 .header-logo a {
    font-size: 0;
@@ -152,19 +152,25 @@ img {
    transition: padding 0.5s ease-in-out;
 }
 #header.collapsed .header-links {
-    padding: 17px 0;
+    padding: 16px 0;
 }
 .header-links a {
    padding: 10px 20px;
    font-size: 20px;
    text-decoration: none;
-   color: #FC4C69;
+   color: #fe5c29;
    letter-spacing: 0.025em;
    transition: all 0.5s ease-in-out;
 }
+.header-links a:last-child {
+  padding-right: 0;
+}
 #header.collapsed .header-links a {
-    font-size: 16px;
+    font-size: 18px;
     padding: 5px 20px;
+}
+#header.collapsed .header-links a:last-child {
+  padding-right: 0;
 }
 /*End : Header CSS*/
 
