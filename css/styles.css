@@ -251,7 +251,8 @@ img {
   padding: 15px 0;
 }
 @media (max-width: 768px){
-  .section {
+  .section,
+  .section:first-of-type {
     height: calc(100vh - 140px)
   }
   .section-content {
@@ -449,5 +450,24 @@ img {
 }
 .contact-us-linkedin {
   display: none;
+}
+@media (max-width: 768px) {
+  .contact-us-row {
+    height: auto;
+    text-align: center;
+  }
+  .contact-us-tile {
+    position: inherit;
+    width: 70%;
+    top: auto;
+    left: auto;
+    transform: none;
+    display: inline-block;
+    margin: 25vh 0;
+  }
+  .contact-us-tile:nth-of-type(2n) {
+    float: none;
+    left: auto;
+  }
 }
 /*End: Contact Us Page Styles*/
