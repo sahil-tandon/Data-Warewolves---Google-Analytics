@@ -73,5 +73,17 @@ $(document).ready(function(){
 
 		ga('send', 'event', thisCategory, thisAction, thisLabel);
 	});
+
+	$('.internal-link, .external-link').on('click', function(){
+		var thisCategory = getCurrentPage(),
+			thisHref = $(this).attr("href"),
+			thisAction = $(this).hasClass("internal-link") ? "Internal Link Click" : "External Link Click",
+			thisLabel = $(this).data('title') + " (" + thisHref + ")";
+		
+		/*****
+			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])
+		*****/
+		ga('send', 'event', thisCategory, thisAction, thisLabel);
+	});
 	/*End: Google Analytics Event Tracking Code*/
 });
