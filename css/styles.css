@@ -69,16 +69,7 @@ img {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
+  box-sizing: border-box;
 }
 @media (min-width: 992px) {
   .container {
@@ -388,5 +379,8 @@ img {
 .contact-us-phone {
     padding-bottom: 10px;
     font-size: 12px;
+}
+.contact-us-linkedin {
+  display: none;
 }
 /*End: Contact Us Page Styles*/
