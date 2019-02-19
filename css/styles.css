@@ -328,18 +328,24 @@ img {
 
 /*Start: Contact Us Page Styles*/
 .contact-us-table {
-  margin-bottom: 30vh;
+  margin-bottom: 10px;
+}
+.contact-us-row {
+  position: relative;
+  height: 100vh;
 }
 .contact-us-tile {
     width: 25%;
-    float: left;
-    border: 1px solid;
+    border: 1px solid #ccc;
     background: #fafafa;
-    margin: 50px 10% 0 15%;
     box-shadow: 3px 3px 10px 2px rgba(0,0,0,0.4);
     transition: box-shadow 0.3s ease-in-out;
     border-radius: 4px;
     box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
 }
 .contact-us-tile:hover {
     box-shadow: 6px 6px 12px 2px rgba(0,0,0,0.5);
@@ -351,20 +357,20 @@ img {
 }
 .contact-us-tile:nth-of-type(2n) {
     float: right;
-    margin: 50px 15% 0 10%;
+    left: 75%;
 }
 .contact-us-info {
     padding: 0 10px;
 }
 .contact-us-info p {
     margin: 0;
-    padding: 5px 0;
+    padding: 3px 0;
     line-height: 1;
     font-size: 14px;
 }
 .contact-us-name {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 16px!important;
     text-transform: uppercase;
 }
 .contact-us-designation {
@@ -375,8 +381,9 @@ img {
     padding: 2px 0;
 }
 .contact-us-email {
-    padding: 0px 0 10px 0;
+    padding: 3px 0 10px 0;
     display: inline-block;
+    font-size: 14px;
 }
 .contact-us-phone {
     padding-bottom: 10px;
