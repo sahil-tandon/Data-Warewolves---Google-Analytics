@@ -13,12 +13,14 @@ $(document).ready(function(){
 
 	/*Start: Handle Header Expand/Collapse*/
 	$(window).scroll(function(){
-        if($(this).scrollTop()>80){
+		if(window.innerWidth > 768) {
+			if($(this).scrollTop()>80){
             $('#header').addClass("collapsed");
-        }
-        else{
-            $('#header').removeClass("collapsed");
-        }
+	        }
+	        else{
+	            $('#header').removeClass("collapsed");
+	        }
+		}        
     });
     /*End: Handle Header Expand/Collapse*/
 

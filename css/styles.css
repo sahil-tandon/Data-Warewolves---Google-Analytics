@@ -178,6 +178,10 @@ img {
   #header {
     height: 140px;
     text-align: center;
+    max-width: 100vw;
+  }
+  .header-logo {
+    padding: 15px 0 0 0;
   }
   .header-logo,
   .header-links {
@@ -185,17 +189,17 @@ img {
     float: none;
   }
   .header-logo img {
-    width: 400px;
+    width: 320px;
   }
   .header-links {
-    padding: 13.5px 0;
+    padding: 19px 0;
   }
   .header-links a {
-    padding: 10px 40px;
+    padding: 10px 10px;
     font-size: 24px;
   }  
   .header-links a:last-child {
-    padding-right: 40px;
+    padding-right: 10px;
   }
 }
 /*End : Header CSS*/
