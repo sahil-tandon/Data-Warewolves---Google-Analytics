@@ -118,6 +118,9 @@ img {
 .external-link:hover {
   color: #333;
 }
+.video {
+  max-width: 700px;
+}
 /*End : Global CSS*/
 
 /*Start : Header CSS*/
