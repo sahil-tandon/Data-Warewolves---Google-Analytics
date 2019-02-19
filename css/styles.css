@@ -116,6 +116,17 @@ img {
   top: 50px;
   height: calc(100vh - 50px);
 }
+.internal-link,
+.external-link {
+  color: #000;
+  text-decoration: underline;
+  text-decoration-style: double;
+  transition: color 0.25s ease-in-out;
+}
+.internal-link:hover,
+.external-link:hover {
+  color: #333;
+}
 /*End : Global CSS*/
 
 /*Start : Header CSS*/
@@ -215,7 +226,7 @@ img {
 }
 .section-copy {
   font-size: 50px;
-  line-height: 50px;
+  line-height: 52px;
   letter-spacing: -3px;
   font-weight: 400;
   padding: 15px 0;
@@ -304,6 +315,14 @@ img {
     line-height: 26px;
     padding-top: 10px;
     letter-spacing: 0.05em;
+}
+.fact-carousel .internal-link,
+.fact-carousel .external-link {
+  color: #fff;
+}
+.fact-carousel .internal-link:hover,
+.fact-carousel .external-link:hover {
+  color: #ddd;
 }
 /*End : Fact Carousel Styles*/
 
