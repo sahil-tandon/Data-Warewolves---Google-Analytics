@@ -201,6 +201,11 @@ img {
   padding: 0 5%;
   box-sizing: border-box;
 }
+@media (max-width: 768px){
+  .section-content {
+    padding: 0;
+  }  
+}
 .section-head {
   font-weight: 800;
   letter-spacing: -10px;
@@ -314,6 +319,22 @@ img {
 .fact-carousel .internal-link:hover,
 .fact-carousel .external-link:hover {
   color: #ddd;
+}
+@media (max-width: 768px) {
+  .fact-carousel .slick-prev {
+      left: 10px;
+      z-index: 999;
+  }
+  .fact-carousel .slick-next {
+      right: 10px;
+      z-index: 999;
+  }
+  .item-content {
+    padding: 10px 30px;
+  }
+  .item-head {
+    padding: 10px 10px;
+  }
 }
 /*End : Fact Carousel Styles*/
 
