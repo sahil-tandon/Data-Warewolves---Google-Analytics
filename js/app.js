@@ -104,7 +104,7 @@ $(document).ready(function(){
 		var thisCategory = getCurrentPage(),
 			thisUrl = $(this).attr("href"),
 			thisAction = "Contact Image Click",
-			thisLabel = $(this).closest('.contact-tile').find('.contact-us-name').text() + " (" + thisUrl + ")";
+			thisLabel = $(this).closest('.contact-us-tile').find('.contact-us-name').text() + " (" + thisUrl + ")";
 		
 		/*****
 			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])
