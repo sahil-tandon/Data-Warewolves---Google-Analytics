@@ -49,10 +49,7 @@ $(document).ready(function(){
 			thisHref = $(this).attr("href"),
 			thisAction = "Header Logo Click",
 			thisLabel = "Home" + " (" + thisHref + ")";
-
-		/*****
-			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])			
-		*****/
+		
 		ga('send', 'event', thisCategory, thisAction, thisLabel);
 	});
 
@@ -61,10 +58,9 @@ $(document).ready(function(){
 			thisHref = $(this).attr("href"),
 			thisAction = "Navigation Click",
 			thisLabel = $(this).text() + " (" + thisHref + ")";
-		
 		/*****
 			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])
-		*****/
+		*****/		
 		ga('send', 'event', thisCategory, thisAction, thisLabel);		
 	});
 
@@ -72,6 +68,14 @@ $(document).ready(function(){
 		var thisCategory = getCurrentPage(),
 			thisAction = "Slider Arrow Click",
 			thisLabel = $(this).hasClass("slick-prev") ? "Previous" : "Next";
+		
+		ga('send', 'event', thisCategory, thisAction, thisLabel);
+	});
+
+	$('.slick-dots li').on('click', function(){
+		var thisCategory = getCurrentPage(),
+			thisAction = "Slider Dot Click",
+			thisLabel = "To Slide "+ $(this).index();
 
 		ga('send', 'event', thisCategory, thisAction, thisLabel);
 	});
@@ -81,10 +85,7 @@ $(document).ready(function(){
 			thisHref = $(this).attr("href"),
 			thisAction = $(this).hasClass("internal-link") ? "Internal Link Click" : "External Link Click",
 			thisLabel = $(this).data('title') + " (" + thisHref + ")";
-		
-		/*****
-			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])
-		*****/
+				
 		ga('send', 'event', thisCategory, thisAction, thisLabel);
 	});
 
@@ -94,9 +95,6 @@ $(document).ready(function(){
 			thisAction = "Contact E-mail Click",
 			thisLabel = $(this).siblings('.contact-us-name').text() + " (" + thisEmail + ")";
 		
-		/*****
-			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])
-		*****/
 		ga('send', 'event', thisCategory, thisAction, thisLabel);
 	});
 
@@ -105,10 +103,7 @@ $(document).ready(function(){
 			thisUrl = $(this).attr("href"),
 			thisAction = "Contact Image Click",
 			thisLabel = $(this).closest('.contact-us-tile').find('.contact-us-name').text() + " (" + thisUrl + ")";
-		
-		/*****
-			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])
-		*****/
+				
 		ga('send', 'event', thisCategory, thisAction, thisLabel);
 	});
 	/*End: Google Analytics Event Tracking Code*/
