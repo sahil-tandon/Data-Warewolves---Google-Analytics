@@ -126,8 +126,7 @@ img {
 .internal-link,
 .external-link {
   color: #000;
-  text-decoration: underline;
-  text-decoration-style: double;
+  text-decoration: underline double;  
   transition: color 0.25s ease-in-out;
 }
 .internal-link:hover,
@@ -186,7 +185,7 @@ img {
 .header-links a.active {
    cursor: default;
    pointer-events: none;
-   text-decoration-style: underline double;
+   text-decoration: underline double;
 }
 .header-links a:last-child {
   padding-right: 0;
