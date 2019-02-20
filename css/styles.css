@@ -186,7 +186,7 @@ img {
 .header-links a.active {
    cursor: default;
    pointer-events: none;
-   text-decoration-style: double;
+   text-decoration-style: underline double;
 }
 .header-links a:last-child {
   padding-right: 0;
