@@ -280,7 +280,7 @@ img {
 }
 @media (max-width: 768px){
   .section {    
-    height: calc(100vh - 140px)  
+    height: calc(100vh - 80px)
   }
   .section:first-of-type {
     height: calc(100vh - 140px)
