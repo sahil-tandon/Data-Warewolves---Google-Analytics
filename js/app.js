@@ -7,7 +7,8 @@ $(document).ready(function(){
 		infinite: false,
 		arrows: true,
 		adaptiveHeight: true,
-		autoplay: false
+		autoplay: false,
+		speed: 300
 	});
 	/*End: Initialize Billboard Carousel*/
 
