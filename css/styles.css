@@ -448,9 +448,6 @@ img {
     padding-bottom: 10px;
     font-size: 12px;
 }
-.contact-us-linkedin {
-  display: none;
-}
 @media (max-width: 768px) {
   .contact-us-row {
     height: auto;

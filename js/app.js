@@ -91,8 +91,20 @@ $(document).ready(function(){
 	$('.contact-us-email').on('click', function(){
 		var thisCategory = getCurrentPage(),
 			thisEmail = $(this).attr("href"),
-			thisAction = $(this).hasClass("internal-link") ? "Internal Link Click" : "External Link Click",
+			thisAction = "Contact E-mail Click",
 			thisLabel = $(this).siblings('.contact-us-name').text() + " (" + thisEmail + ")";
+		
+		/*****
+			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])
+		*****/
+		ga('send', 'event', thisCategory, thisAction, thisLabel);
+	});
+
+	$('.contact-us-linkedin').on('click', function(){
+		var thisCategory = getCurrentPage(),
+			thisUrl = $(this).attr("href"),
+			thisAction = "Contact Image Click",
+			thisLabel = $(this).closest('.contact-tile').find('.contact-us-name').text() + " (" + thisUrl + ")";
 		
 		/*****
 			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])
