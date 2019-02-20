@@ -352,16 +352,16 @@ img {
   position: relative;
 }
 .fact-item:nth-child(4n) {
-  background: #0F9D58;
-}
-.fact-item:nth-child(4n+1) {
-  background: #DB4437;
-}
-.fact-item:nth-child(4n+2) {
   background: #F4B400;
 }
-.fact-item:nth-child(4n+3) {
+.fact-item:nth-child(4n+1) {
   background: #4285F4;
+}
+.fact-item:nth-child(4n+2) {  
+  background: #0F9D58;
+}
+.fact-item:nth-child(4n+3) {
+  background: #DB4437;  
 }
 .fact-carousel .slick-list {
   border: 5px solid #000;
