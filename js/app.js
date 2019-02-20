@@ -21,7 +21,15 @@ $(document).ready(function(){
 	        else{
 	            $('#header').removeClass("collapsed");
 	        }
-		}        
+		}
+		else {
+			if($(this).scrollTop()>140){
+            $('#header').addClass("collapsed");
+	        }
+	        else{
+	            $('#header').removeClass("collapsed");
+	        }
+		}    
     });
     /*End: Handle Header Expand/Collapse*/
 
