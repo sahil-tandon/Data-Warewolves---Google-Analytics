@@ -87,5 +87,17 @@ $(document).ready(function(){
 		*****/
 		ga('send', 'event', thisCategory, thisAction, thisLabel);
 	});
+
+	$('.contact-us-email').on('click', function(){
+		var thisCategory = getCurrentPage(),
+			thisEmail = $(this).attr("href"),
+			thisAction = $(this).hasClass("internal-link") ? "Internal Link Click" : "External Link Click",
+			thisLabel = $(this).siblings('.contact-us-name').text() + " (" + thisEmail + ")";
+		
+		/*****
+			Fire analytics event: ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue])
+		*****/
+		ga('send', 'event', thisCategory, thisAction, thisLabel);
+	});
 	/*End: Google Analytics Event Tracking Code*/
 });
