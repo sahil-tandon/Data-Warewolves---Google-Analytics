@@ -183,6 +183,11 @@ img {
    letter-spacing: 0.025em;
    transition: all 0.5s ease-in-out;
 }
+.header-links a.active {
+   cursor: default;
+   pointer-events: none;
+   text-decoration-style: double;
+}
 .header-links a:last-child {
   padding-right: 0;
 }
